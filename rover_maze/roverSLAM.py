@@ -16,9 +16,7 @@ import math
 #import mavros
 
 from sensor_msgs.msg import LaserScan
-#from mavros.msg import OverrideRCIn
 
-#pub = rospy.Publisher('/mavros/rc/override', OverrideRCIn, queue_size=10)
 
 def callback(data):
     frame = np.zeros((500, 500,3), np.uint8)
@@ -57,20 +55,9 @@ def callback(data):
     print "vehicle.channels.overrides[1] = " , vehicle.channels['1']
     
     print "vehicle.channels['3']", vehicle.channels['3']
-    
-    time.sleep(0.4)
+
     
 
-    #msg = OverrideRCIn()
-    #msg.channels[0] = yaw
-    #msg.channels[1] = 0
-    #msg.channels[2] = throttle
-    #msg.channels[3] = 0
-    #msg.channels[4] = 0
-    #msg.channels[5] = 0
-    #msg.channels[6] = 0
-    #msg.channels[7] = 0
-    #pub.publish(msg)   
 
 def laser_listener():
     rospy.init_node('laser_listener', anonymous=True)
