@@ -35,5 +35,5 @@ Ground Control Station:
 MAVProxy 
 
 Simulation: 
-Gazebo SITl 
+Gazebo SITl
 
