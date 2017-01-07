@@ -1,0 +1,43 @@
+<launch>
+
+	<node name="serial_node" pkg="rosserial_python" type="serial_node.py" output="screen" respawn="true">
+		<param name="port" type="string" value="/dev/ttyACM0"/>
+		<param name="baud" type="int" value="9600"/>
+    </node>
+
+	<node name="arduinoListener" pkg="drone_development" type="arduinoListener.py"
+		output="screen" respawn="true">
+	</node>
+
+	<node name="terarangerone_node" pkg="terangerone" type="terarangerone.cpp" 
+		output="screen" respawn="true">
+		<param name="port" type="string" value="/dev/ttyUSB0" />
+	</node>
+
+	<node name="terarangerone_node2" pkg="terangerone2" type="terarangerone2.cpp" 
+		output="screen" respawn="true">
+		<param name="port" type="string" value="/dev/ttyUSB1" />
+	</node>
+
+	<node name="terarangerone_node3" pkg="terangerone3" type="terarangerone3.cpp" 
+		output="screen" respawn="true">
+		<param name="port" type="string" value="/dev/ttyUSB2" />
+	</node>
+
+	<node name="terarangerone_node4" pkg="terangerone4" type="terarangerone4.cpp" 
+		output="screen" respawn="true">
+		<param name="port" type="string" value="/dev/ttyUSB3" />
+	</node>
+
+
+	<node name="teraListener" pkg="drone_development" type="terarangerListener.py"
+		output="screen" respawn="true">
+	</node>
+
+	<node name="mainCode" pkg="drone_development" type="ROSmainCode2.py"
+		output="screen" respawn="true">
+	</node>
+
+
+</launch>
+ 
