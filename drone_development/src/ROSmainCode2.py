@@ -411,21 +411,7 @@ class listener (object):
 
 			#/////////////// Prepare for take off correction for goto() ////////
 			#//////////////////////////////////////////////////////////////////
-			
-			# ------------------ obsolete ---------------------------------------
-			print " Attitude: %s" % vehicle.attitude
-			vehicleAttitude = str (vehicle.attitude)
-			vehicleAttitude = re.findall(r"-?\d.\d+", vehicleAttitude)
-			startupPitch = vehicleAttitude[0]
-			startupYawStr = vehicleAttitude[1]
-			startupRoll = vehicleAttitude[2]
-			print "Startup pitch: %s" % startupPitch
-			print "Startup yaw: %s" % startupYawStr
-			print "Startup roll %s" % startupRoll 
-			startupYaw = float(startupYawStr)
-			#///////////////////////////////////////////////////////////////////
-
-
+	
 
 			#///////////////////////////////////////////////////////////////////
 			#////////////////////////// Taking Off /////////////////////////////
@@ -450,28 +436,6 @@ class listener (object):
 			#////////////////////// executing goto() ////////////////////////////
 			#///////////////////////////////////////////////////////////////////
 			
-			
-			# ---------------------- obsolete ----------------------------------
-			"""
-			desiredDistance = 50 
-				
-			print "Value of x component: ", math.cos(startupYaw)
-			print "Value of y component: " , math.sin(startupYaw)
-
-			dNorth = desiredDistance* math.cos(startupYaw)
-			dEast = desiredDistance* math.sin(startupYaw)
-
-			print "Distance towards the north: " ,dNorth
-			print "Distance towards the east: " ,dEast
-
-			vehicle.groundspeed = 2
-
-			calculatedDistance = math.sqrt(math.pow(dNorth,2) + math.pow(dEast,2))
-			print "Calculated distance in metres: " , calculatedDistance
-			"""
-			
-			#///////////////////////////////////////////////////////////////////
-
 			
 			#////////////////// finding the teddy bear /////////////////////////
 			
