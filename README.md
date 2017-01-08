@@ -1,5 +1,4 @@
-# drones_multi_disciplinary_project
-
+# Multi Disciplinary Project (MDP) 
 
 
 (still under development as of 7th Jan 2017) 
