@@ -1,0 +1,6 @@
+crontab -e 
+
+----- scroll to the bottom of the line ------
+@reboot /home/mun/autoStart/auto_start_drone_development.sh >> /home/mun/autoStart.log 2>&1
+
+
