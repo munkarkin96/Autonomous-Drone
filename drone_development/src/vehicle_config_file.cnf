@@ -1,0 +1,12 @@
+[dronekit]
+connection_string = 127.0.0.1:14550
+#connection_string = 172.22.54.192:14550
+#connection_string = /dev/ttyACM1
+baud = 57600
+
+[camera]
+type = 0
+#width = 1920
+#height = 1080
+horizontal_fov = 170
+vertical_fov = 69.5
